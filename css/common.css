@@ -1,3 +1,135 @@
-body {
-  background-color: aqua;
-}
+
+/* 공용 css */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    width: 430px;
+    margin: 0;
+    height: 932px;
+    display: flex;
+    flex-direction: column;
+    border: 1px green solid;
+  }
+/* header 영역 */
+  header {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    border: 1px green solid;
+    display: flex;
+    flex-direction: row;
+    background: #2196F3;
+    color: #FFFFFF;
+  }
+  .logo {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 15px;
+    text-align: left;
+    position: absolute;
+    left: 98px;
+    top: 68px;
+
+  } 
+  header > .btn {
+    position: absolute;
+    left: 404px;
+    top: 69px;
+  }
+
+
+     /* main의 컨텐츠 영역 */
+  #container1 {
+    width: 100%;
+    height: 732px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2196F3;
+    border: 1px green solid;
+  }
+  /* .box1 {
+    
+  } */
+  #container1 >.box2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px green solid;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 100%;
+    color: #333333;
+    position: relative;
+  }
+  
+    /*  container1 글자 겹치기*/
+    .box2 > div {
+      position: absolute;
+    }
+    .item-1 { 
+
+    left: 23px;
+    top: 329px;
+  }
+    .item-2 {
+left: 23px;
+top: 382px;
+  }
+  .item-3 {
+    left: 23px;
+    top: 435px;
+  }
+  .item-4 {   
+    left: 23px;
+    top: 488px;
+  }
+  .item-5 {
+    left: 23px;
+    top: 541px;
+  }
+  #container1 >.box2 > div:nth-child(n+2):nth-child(-n+4) {
+    color: #2196F3;
+
+  }
+  #container1 > .box3 {
+    width: 100%;
+    height: ;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    border: 1px green solid;
+    
+  }
+  #container2 {
+    width: 100%;
+    height: 732px;
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    ;
+    
+    background-color:  #2196F3;;
+  }
+ #container2 > .comment > div {
+  font-family: 'Karantina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 130px;
+ }
+ .box3 {
+  position: relative;
+  width: 100%;
+  top: 817px;
+  
+ }
+/* footer 영역 */
+  footer {
+    width: 100%;
+    height: 200px;
+    border: 1px green solid;
+    background-color: #333333;;
+  }
