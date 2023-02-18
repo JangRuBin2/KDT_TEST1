@@ -4,6 +4,7 @@
 }
 body {
   width: 430px;
+  height: 1864px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -13,24 +14,19 @@ header {
   width: 100%;
   height: 110px;
   background-color: #2196F3;
+  /* 헤더 타이틀 가운데 정렬 */
   display: flex;
   flex-direction: row;
-  /* 헤더 타이틀 가운데 정렬 */
   justify-content: center;
-  
   color: #FFFFFF;
   font-weight: 900;
-  font-size: 12px;
-  line-height: 15px;    
+  font-size: 12px;   
 }
-header > div {
+
   /* 문구와 버튼 포지셔닝 */
+header > div {
   margin-top: 70px;
   margin-left: 70px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 
@@ -38,39 +34,34 @@ header > div {
 /* 메인 컨테이너 */
 main {
   width: 100%;
-  height: 1554px;
+  height: 1464px;
   display: flex;
   flex-direction: column;
-  align-items: cen;
-  justify-content: flex-start; 
+  justify-content: center; 
 }
 main > .container1 {
   width: 100%;
-  height: 50%;
+  height: 732px;
 }
-/* 모바일은 안보임 */
-.box1 {
-  /* 모바일버전에서 안보이게 하기위함 */
-  width: 100%;
-  height: 25%;
-}
+
 /* 컨테이너1_코멘트 */
 .box2 {
   width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  margin: 50px;
-  margin-top: 240px;
+  margin: 70px;
+  justify-content: end;
+  
 }
 .box2 > div {
-  font-weight: 700;
+    font-weight: 700;
     font-size: 96px;
     /* 폰트 겹치게 */
     margin: -38px;
 }
-.box3 > div{
-  display: flex;
-  align-items: center;
+.container1 >.box2 > div:nth-child(n+2):nth-child(-n+4) {
+  color: #2196F3;
 }
 /* 꺽쇠 */
 /* .wrap {
@@ -116,37 +107,35 @@ main > .container1 {
 /* 컨테이너1_서브 타이틀 */
 .container1 > .box3 {
   width: 100%;
-  height: 25%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   color: #2196F3;
 
 }
 
 .box3 > div {
   text-align: center;
-  
+  height: 50px;
 }
-/* 컨텐츠2영역 */
-.container1 >.box2 > div:nth-child(n+2):nth-child(-n+4) {
-    color: #2196F3;
-}
+
+
 main > .container2 {
   width: 100%;
-  height: 50%;
+  height: 732px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #2196F3;
 }
-.container2 > .box3 {
-  width: 66%;
+
+.container2 > .box4 {
+  width: 305px;
   display: flex;
   flex-direction: column;
-  margin-top: 200px;
-  margin-left: 20px;
+  align-items: center;
   border-bottom: 4px #FFFFFF solid;
 }
-.container2 > .box3 > div {
+.container2 > .box4 > div {
   color: #FFFFFF;
   text-align: left;
   width: 300px;
@@ -181,6 +170,8 @@ footer > div {
   line-height: 10px;
 }
 
+/* 모바일 버전일 때는 헤더_서브타이틀
+안보이게 */
 @media screen and (min-width: 430px) {
   .box1{
     display: none;
@@ -199,53 +190,48 @@ footer > div {
     height: 2530px;
   }
  header {
-    display: flex;
     flex-direction: column;
-    width: 100%;
     height: 300px;
-    justify-content: center;
-    align-items: center;
   }
   header > div {
     margin: 0;
     display: flex;
     justify-content: center;
   }
+  header > .wrap {
+    display: none;
+  }
   header > .title {
     height: 100px;
     align-items: flex-end;
     margin-bottom: 30px;
   }
-  .wrap {
-    display: none;
-  }
   main {
-    width: 100%;
     height: 2230px;
-    display: flex;
-    flex-direction: column;
   }
  /* .wrap {
     display: none;
   } */
   main > .container1 {
-    width: 1024px;
-    height: 1064px;
+    height: 1368px;
     display: flex;
     flex-direction: column;
   }
-  
+  main > .container1 > div {
+    height: 200px;
+  }
+.container1 > .box2 {
+    height: 600px;
+}
  header > .box1 {
-  width:1024px;
   height: 200px;
   display: flex;
   flex-direction: column;
   background: #F0F0F0; 
-  align-items: left;
-  justify-content: center;
   color: #000000;
  }
 .box1 > div {
+  margin: 5px;
   margin-left: 50px;
   font-weight: 400;
   font-size: 12px;
@@ -255,11 +241,6 @@ footer > div {
 .box2 > div {
   margin-top: -10px;
 }
-
-.container1 > .box2 {
-  margin-top: 0px;
-  margin-left: 100px;
-} 
 .container1 > .box3 {
   align-items: center;
   margin-left: -300px;
@@ -271,22 +252,19 @@ footer > div {
   height: 196px;
 }
 .container2 > .wrap{
-  display: none;
+  width: 600px;
+  border-bottom: #FFFFFF 4px solid;
 }
 main > .container2 {
-  width: 1024px;
+  width: 100%;
   height: 1368px;
-}
-.box3 > div {
   display: flex;
   flex-direction: row;
-
-}
-.container2 {
-  display: flex;
-  align-items: center;
 }
 
+.box4 {
+  margin-left: 40px;
+}
 footer {
   width: 1024px;
   height: 200px;
